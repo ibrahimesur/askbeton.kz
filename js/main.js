@@ -1,6 +1,8 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
-    // ---- Smooth Scrolling ----
+document.addEventListener('DOMContentLoaded', () => {
+    // ---- Smooth Scrolling & Mobile Menu Selection ----
     const links = document.querySelectorAll('nav a, .hero-buttons a, .footer-widget a[href^="#"]');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const headerMain = document.querySelector('.header-main');
 
     links.forEach(link => {
         link.addEventListener('click', function (e) {
@@ -10,6 +12,9 @@
 
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
+                // Close mobile menu if open
+                if (headerMain) headerMain.classList.remove('nav-open');
+
                 // Adjust for sticky header height
                 const headerOffset = 80;
                 const elementPosition = targetElement.getBoundingClientRect().top;
@@ -22,6 +27,13 @@
             }
         });
     });
+
+    // Mobile Menu Toggle
+    if (menuToggle && headerMain) {
+        menuToggle.addEventListener('click', () => {
+            headerMain.classList.toggle('nav-open');
+        });
+    }
 
     // ---- Intersection Observer for Reveal Animations ----
     const fadeElements = document.querySelectorAll('.fade-in');
@@ -45,7 +57,7 @@
         observer.observe(el);
     });
 
-        // ---- Language Switching Logic ----
+    // ---- Language Switching Logic ----
     const langBtns = document.querySelectorAll('.lang-btn');
     const savedLang = localStorage.getItem('site_lang') || 'ru';
     
@@ -64,7 +76,7 @@
                 if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
                     el.placeholder = translations[lang][key];
                 } else {
-                    el.innerHTML = translations[lang][key]; // innerHTML allows <br> and <strong> tags
+                    el.innerHTML = translations[lang][key];
                 }
             }
         });
@@ -108,17 +120,14 @@
 
         // Update WhatsApp Link
         const gradeText = calcGrade.options[calcGrade.selectedIndex].text.split('-')[0].trim();
-        const message = `Ğ—Ğ´Ñ€Ğ°Ğ²ÑÑ‚Ğ²ÑƒĞ¹Ñ‚Ğµ! ĞœĞ¾Ğ¶ĞµÑ‚Ğµ Ñ€Ğ°ÑÑÑ‡Ğ¸Ñ‚Ğ°Ñ‚ÑŒ Ğ·Ğ°ĞºĞ°Ğ·?%0AĞœĞ°Ñ€ĞºĞ°: ${gradeText}%0AĞĞ±ÑŠĞµĞ¼: ${volume} Ğ¼Â³%0AĞŸÑ€Ğ¸Ğ¼ĞµÑ€Ğ½Ğ°Ñ Ñ†ĞµĞ½Ğ° (Ğ±ĞµĞ· Ğ´Ğ¾ÑÑ‚Ğ°Ğ²ĞºĞ¸): ${formatNumberStr(total)} â‚¸`;
+        const message = `Ğ—Ğ´Ñ€Ğ°Ğ²Ñ Ñ‚Ğ²ÑƒĞ¹Ñ‚Ğµ! ĞœĞ¾Ğ¶ĞµÑ‚Ğµ Ñ€Ğ°Ñ Ñ Ñ‡Ğ¸Ñ‚Ğ°Ñ‚ÑŒ Ğ·Ğ°ĞºĞ°Ğ·?%0AĞœĞ°Ñ€ĞºĞ°: ${gradeText}%0AĞžĞ±ÑŠĞµĞ¼: ${volume} Ğ¼Â³%0AĞŸÑ€Ğ¸Ğ¼ĞµÑ€Ğ½Ğ°Ñ  Ñ†ĞµĞ½Ğ° (Ğ±ĞµĞ· Ğ´Ğ¾Ñ Ñ‚Ğ°Ğ²ĞºĞ¸): ${formatNumberStr(total)} â‚¸`;
 
-        // Number provided dynamically
         calcOrderBtn.setAttribute('href', `https://wa.me/77027520605?text=${message}`);
     }
 
     if (calcGrade && calcVolume) {
         calcGrade.addEventListener('change', updateCalculator);
         calcVolume.addEventListener('input', updateCalculator);
-
-        // Initial run
         updateCalculator();
     }
 });
