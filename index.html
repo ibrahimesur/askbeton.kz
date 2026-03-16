@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -21,6 +21,7 @@
             gap: 10px;
             align-items: center;
         }
+
         .lang-btn {
             background: transparent;
             border: 1px solid var(--border-color);
@@ -31,7 +32,9 @@
             cursor: pointer;
             transition: var(--trans-speed);
         }
-        .lang-btn:hover, .lang-btn.active {
+
+        .lang-btn:hover,
+        .lang-btn.active {
             background: var(--primary);
             border-color: var(--primary);
         }
@@ -44,12 +47,23 @@
     <header class="main-header">
         <div class="header-top">
             <div class="container header-top-inner">
-                <div class="location"><a
-                        href="https://yandex.kz/maps/?text=Квартал+096,+7225%2F1,+с.+Коксай,+Карасайский+район,+Алматинская+область"
-                        target="_blank" style="color: inherit; text-decoration: none; transition: color 0.3s;"
-                        onmouseover="this.style.color='#0284c7'" onmouseout="this.style.color='inherit'"><i
-                            class="fa-solid fa-map-pin"></i> <span data-i18n="header.location">с. Коксай, Квартал 096, 7225/1</span></a></div>
-                <div class="working-hours"><i class="fa-regular fa-clock"></i> <span data-i18n="header.hours">Работаем 24/7</span></div>
+                <div class="header-top-left">
+                    <div class="lang-switcher">
+                        <button class="lang-btn active" data-lang="ru">RU</button>
+                        <button class="lang-btn" data-lang="kz">KZ</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                </div>
+                <div class="header-top-right">
+                    <div class="location"><a
+                            href="https://yandex.kz/maps/?text=Квартал+096,+7225%2F1,+с.+Коксай,+Карасайский+район,+Алматинская+область"
+                            target="_blank" style="color: inherit; text-decoration: none; transition: color 0.3s;"
+                            onmouseover="this.style.color='#0284c7'" onmouseout="this.style.color='inherit'"><i
+                                class="fa-solid fa-map-pin"></i> <span data-i18n="header.location">с. Коксай, Квартал
+                                096, 7225/1</span></a></div>
+                    <div class="working-hours"><i class="fa-regular fa-clock"></i> <span
+                            data-i18n="header.hours">Работаем 24/7</span></div>
+                </div>
             </div>
         </div>
         <div class="header-main">
@@ -70,13 +84,9 @@
                 </nav>
 
                 <div class="header-actions">
-                    <div class="lang-switcher">
-                        <button class="lang-btn active" data-lang="ru">RU</button>
-                        <button class="lang-btn" data-lang="kz">KZ</button>
-                        <button class="lang-btn" data-lang="en">EN</button>
-                    </div>
                     <a href="tel:+77027520605" class="phone-link">+7 (702) 752-06-05</a>
-                    <a href="#contact" class="btn btn-primary btn-sm hidden-mobile" data-i18n="header.call">Заказать звонок</a>
+                    <a href="#contact" class="btn btn-primary btn-sm hidden-mobile" data-i18n="header.call">Заказать
+                        звонок</a>
                     <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
                 </div>
             </div>
@@ -90,7 +100,8 @@
             <div class="hero-content fade-in">
                 <div class="hero-tag" data-i18n="hero.tag">Прямые поставки от завода</div>
                 <h1 class="hero-heading" data-i18n="hero.h1">Производство бетона<br>высшей категории</h1>
-                <p class="hero-desc" data-i18n="hero.desc">Гарантируем точный объем и соответствие марки благодаря собственной аккредитованной
+                <p class="hero-desc" data-i18n="hero.desc">Гарантируем точный объем и соответствие марки благодаря
+                    собственной аккредитованной
                     лаборатории.</p>
                 <div class="hero-buttons">
                     <a href="#catalog" class="btn btn-primary btn-lg" data-i18n="hero.btn1">Выбрать марку</a>
@@ -125,7 +136,8 @@
                 <div class="about-card fade-in">
                     <div class="about-icon"><i class="fa-solid fa-industry"></i></div>
                     <h4 data-i18n="about.card1.title">Высокие стандарты</h4>
-                    <p data-i18n="about.card1.desc">Мы — современный бетонный завод, ориентированный на качество, надежность
+                    <p data-i18n="about.card1.desc">Мы — современный бетонный завод, ориентированный на качество,
+                        надежность
                         и долгосрочное сотрудничество. Строгий контроль — от
                         отбора сырья до отгрузки.</p>
                 </div>
@@ -140,19 +152,22 @@
                 <div class="about-card fade-in delay-2">
                     <div class="about-icon"><i class="fa-solid fa-clipboard-check"></i></div>
                     <h4 data-i18n="about.card3.title">Строгий контроль</h4>
-                    <p data-i18n="about.card3.desc">Процесс соответствует ГОСТу и проходит <strong>многоуровневый контроль качества</strong>.
+                    <p data-i18n="about.card3.desc">Процесс соответствует ГОСТу и проходит <strong>многоуровневый
+                            контроль качества</strong>.
                         Каждая партия сопровождается сертификатами и паспортами.</p>
                 </div>
                 <div class="about-card fade-in delay-3">
                     <div class="about-icon"><i class="fa-solid fa-truck-moving"></i></div>
                     <h4 data-i18n="about.card4.title">Высокая производительность</h4>
-                    <p data-i18n="about.card4.desc">Производственная мощность завода — <strong>до 1500 м³ бетона за смену</strong>, что гарантирует
+                    <p data-i18n="about.card4.desc">Производственная мощность завода — <strong>до 1500 м³ бетона за
+                            смену</strong>, что гарантирует
                         своевременные и бесперебойные поставки на объекты любого масштаба.</p>
                 </div>
             </div>
 
             <div class="about-footer-text fade-in">
-                <p data-i18n="about.footer">Мы ценим доверие наших клиентов и строим свою репутацию на качестве, честности и ответственности.</p>
+                <p data-i18n="about.footer">Мы ценим доверие наших клиентов и строим свою репутацию на качестве,
+                    честности и ответственности.</p>
             </div>
         </div>
     </section>
@@ -171,17 +186,20 @@
                     style="background-color: var(--darker-bg); border: 1px solid #1e293b; box-shadow: none;">
                     <i class="fa-solid fa-industry" style="color: var(--primary);"></i>
                     <h3 style="color: var(--white);" data-i18n="why.box1.title">БСУ SCHWING Stetter</h3>
-                    <p style="color: #94a3b8;" data-i18n="why.box1.desc">Наш бетонный узел работает на базе передового <strong>немецкого
+                    <p style="color: #94a3b8;" data-i18n="why.box1.desc">Наш бетонный узел работает на базе передового
+                        <strong>немецкого
                             оборудования SCHWING
                             Stetter</strong>,
-                        автоматизирующего процесс взвешивания и обеспечивающего идеальное качество каждой партии.</p>
+                        автоматизирующего процесс взвешивания и обеспечивающего идеальное качество каждой партии.
+                    </p>
                 </div>
                 <!-- Box 2 -->
                 <div class="feature-box light-box fade-in delay-1"
                     style="background-color: var(--darker-bg); border: 1px solid #1e293b; box-shadow: none;">
                     <i class="fa-solid fa-microscope" style="color: var(--primary);"></i>
                     <h3 style="color: var(--white);" data-i18n="why.box2.title">Умный контроль</h3>
-                    <p style="color: #94a3b8;" data-i18n="why.box2.desc">Каждая отправляемая партия сопровождается паспортом качества. Мы
+                    <p style="color: #94a3b8;" data-i18n="why.box2.desc">Каждая отправляемая партия сопровождается
+                        паспортом качества. Мы
                         тестируем образцы на прочность и морозостойкость.</p>
                 </div>
                 <!-- Box 3 -->
@@ -189,7 +207,8 @@
                     style="background-color: var(--darker-bg); border: 1px solid #1e293b; box-shadow: none;">
                     <i class="fa-solid fa-truck-fast" style="color: var(--primary);"></i>
                     <h3 style="color: var(--white);" data-i18n="why.box3.title">Собственная логистика</h3>
-                    <p style="color: #94a3b8;" data-i18n="why.box3.desc">В нашем парке миксеры различной кубатуры, что позволяет гибко подходить к
+                    <p style="color: #94a3b8;" data-i18n="why.box3.desc">В нашем парке миксеры различной кубатуры, что
+                        позволяет гибко подходить к
                         доставке как на крупные объекты, так и в частный сектор.</p>
                 </div>
 
@@ -197,7 +216,8 @@
                     style="background-color: var(--darker-bg); border: 1px solid #1e293b; box-shadow: none;">
                     <i class="fa-solid fa-gem" style="color: var(--primary);"></i>
                     <h3 style="color: var(--white);" data-i18n="why.box4.title">Качественные материалы</h3>
-                    <p style="color: #94a3b8;" data-i18n="why.box4.desc">Используем сертифицированный цемент, мытый песок и щебень, что
+                    <p style="color: #94a3b8;" data-i18n="why.box4.desc">Используем сертифицированный цемент, мытый
+                        песок и щебень, что
                         обеспечивает прочность и долговечность бетонных смесей.</p>
                 </div>
 
@@ -205,7 +225,8 @@
                     style="background-color: var(--darker-bg); border: 1px solid #1e293b; box-shadow: none;">
                     <i class="fa-solid fa-handshake" style="color: var(--primary);"></i>
                     <h3 style="color: var(--white);" data-i18n="why.box5.title">Опыт и надёжность</h3>
-                    <p style="color: #94a3b8;" data-i18n="why.box5.desc">Работаем со строительными компаниями и частными застройщиками,
+                    <p style="color: #94a3b8;" data-i18n="why.box5.desc">Работаем со строительными компаниями и частными
+                        застройщиками,
                         обеспечивая своевременные поставки и стабильное качество.</p>
                 </div>
 
@@ -213,7 +234,8 @@
                     style="background-color: var(--darker-bg); border: 1px solid #1e293b; box-shadow: none;">
                     <i class="fa-solid fa-clock-rotate-left" style="color: var(--primary);"></i>
                     <h3 style="color: var(--white);" data-i18n="why.box6.title">Работа без простоев</h3>
-                    <p style="color: #94a3b8;" data-i18n="why.box6.desc"><strong>Стабильная работа 24/7</strong><br>Современное оборудование и
+                    <p style="color: #94a3b8;" data-i18n="why.box6.desc"><strong>Стабильная работа
+                            24/7</strong><br>Современное оборудование и
                         отлаженная система производства позволяют обеспечивать бесперебойный выпуск бетона.</p>
                 </div>
             </div>
@@ -236,7 +258,8 @@
                         <span class="class-label">В7.5</span>
                     </div>
                     <div class="item-info">
-                        <p data-i18n="cat.m100.desc">Применяется для подготовительных работ перед заливкой фундамента, а также в дорожном
+                        <p data-i18n="cat.m100.desc">Применяется для подготовительных работ перед заливкой фундамента, а
+                            также в дорожном
                             строительстве.</p>
                     </div>
                     <div class="item-price">
@@ -256,7 +279,8 @@
                         <span class="class-label">В10</span>
                     </div>
                     <div class="item-info">
-                        <p data-i18n="cat.m150.desc">Используется для стяжек полов, фундаментов легких сооружений (заборы, гаражи).</p>
+                        <p data-i18n="cat.m150.desc">Используется для стяжек полов, фундаментов легких сооружений
+                            (заборы, гаражи).</p>
                     </div>
                     <div class="item-price">
                         <div class="price-val">21 000 ₸</div>
@@ -275,7 +299,8 @@
                         <span class="class-label">В15</span>
                     </div>
                     <div class="item-info">
-                        <p data-i18n="cat.m200.desc">Ленточные и плитные фундаменты, бетонные дорожки, подпорные стены.</p>
+                        <p data-i18n="cat.m200.desc">Ленточные и плитные фундаменты, бетонные дорожки, подпорные стены.
+                        </p>
                     </div>
                     <div class="item-price">
                         <div class="price-val">21 500 ₸</div>
@@ -294,7 +319,8 @@
                         <span class="class-label">В20</span>
                     </div>
                     <div class="item-info">
-                        <p data-i18n="cat.m250.desc">Монолитные фундаменты, перекрытия, дорожки, слабонагруженные плиты.</p>
+                        <p data-i18n="cat.m250.desc">Монолитные фундаменты, перекрытия, дорожки, слабонагруженные плиты.
+                        </p>
                     </div>
                     <div class="item-price">
                         <div class="price-val">22 500 ₸</div>
@@ -313,7 +339,8 @@
                         <span class="class-label">В22.5</span>
                     </div>
                     <div class="item-info">
-                        <p data-i18n="cat.m300.desc">М300 используется для несущих стен, монолитных лестниц и конструкций с повышенной нагрузкой.</p>
+                        <p data-i18n="cat.m300.desc">М300 используется для несущих стен, монолитных лестниц и
+                            конструкций с повышенной нагрузкой.</p>
                     </div>
                     <div class="item-price">
                         <div class="price-val">23 500 ₸</div>
@@ -351,7 +378,8 @@
                         <span class="class-label">В30</span>
                     </div>
                     <div class="item-info">
-                        <p data-i18n="cat.m400.desc">М400 используется для особо прочных конструкций: мостов, гидротехнических сооружений и других объектов с высокой нагрузкой.</p>
+                        <p data-i18n="cat.m400.desc">М400 используется для особо прочных конструкций: мостов,
+                            гидротехнических сооружений и других объектов с высокой нагрузкой.</p>
                     </div>
                     <div class="item-price">
                         <div class="price-val">27 000 ₸</div>
@@ -365,18 +393,25 @@
             </div>
 
             <div class="text-center mt-4">
-                <div style="max-width: 800px; margin: 0 auto; background-color: #f8fafc; border-left: 4px solid var(--primary); padding: 15px 20px; text-align: left; margin-bottom: 20px; border-radius: 4px; border: 1px solid #e2e8f0;">
-                    <p style="font-size: 1.05rem; font-weight: 600; color: #1e293b; margin-bottom: 8px;" data-i18n="cat.disc1">
+                <div
+                    style="max-width: 800px; margin: 0 auto; background-color: #f8fafc; border-left: 4px solid var(--primary); padding: 15px 20px; text-align: left; margin-bottom: 20px; border-radius: 4px; border: 1px solid #e2e8f0;">
+                    <p style="font-size: 1.05rem; font-weight: 600; color: #1e293b; margin-bottom: 8px;"
+                        data-i18n="cat.disc1">
                         Стоимость указана за 1м³ без учёта доставки.
                     </p>
                     <p style="font-size: 0.95rem; color: #475569; margin-bottom: 10px;" data-i18n="cat.disc2">
-                        Стоимость доставки рассчитывается индивидуально в зависимости от расстояния до вашего объекта. Оставьте заявку, и мы рассчитаем итоговую смету!
+                        Стоимость доставки рассчитывается индивидуально в зависимости от расстояния до вашего объекта.
+                        Оставьте заявку, и мы рассчитаем итоговую смету!
                     </p>
                     <p style="font-size: 0.9rem; color: #dc2626; margin-bottom: 0; font-weight: 500;">
-                        <i class="fa-regular fa-calendar-check" style="margin-right: 4px;"></i> <span data-i18n="cat.disc3.1">Цены актуальны на</span> <span id="current-price-date">16.03.2026</span> <span data-i18n="cat.disc3.2">(в связи с нестабильностью цен на сырьё, стоимость может корректироваться)</span>
+                        <i class="fa-regular fa-calendar-check" style="margin-right: 4px;"></i> <span
+                            data-i18n="cat.disc3.1">Цены актуальны на</span> <span
+                            id="current-price-date">16.03.2026</span> <span data-i18n="cat.disc3.2">(в связи с
+                            нестабильностью цен на сырьё, стоимость может корректироваться)</span>
                     </p>
                 </div>
-                <p class="small-text text-muted" data-i18n="cat.small_info">* Доставка по г. Алматы от 3000 тенге. При заказе менее 10 м³, оплата
+                <p class="small-text text-muted" data-i18n="cat.small_info">* Доставка по г. Алматы от 3000 тенге. При
+                    заказе менее 10 м³, оплата
                     взимается как за доставку 10 м³. Услуги бетононасоса — от 40 000 тенге в час.</p>
             </div>
         </div>
@@ -384,10 +419,12 @@
 
     <section class="pump-banner bg-primary text-white section-padding" style="padding: 40px 0;">
         <div class="container text-center fade-in">
-            <h3 style="margin-bottom: 15px;"><i class="fa-solid fa-truck-ramp-box"></i> <span data-i18n="pump.title">Аренда бетононасоса</span></h3>
-                <p style="font-size: 1.1rem; margin-bottom: 0;"><span data-i18n="pump.desc">Услуги бетононасоса (37-67 метров).</span>
-                    <strong data-i18n="pump.price">Стоимость: от 40 000 тенге в час.</strong>
-                </p>
+            <h3 style="margin-bottom: 15px;"><i class="fa-solid fa-truck-ramp-box"></i> <span
+                    data-i18n="pump.title">Аренда бетононасоса</span></h3>
+            <p style="font-size: 1.1rem; margin-bottom: 0;"><span data-i18n="pump.desc">Услуги бетононасоса (37-67
+                    метров).</span>
+                <strong data-i18n="pump.price">Стоимость: от 40 000 тенге в час.</strong>
+            </p>
         </div>
     </section>
 
@@ -397,7 +434,8 @@
             <div class="calc-box fade-in">
                 <div class="calc-form-area">
                     <h2 data-i18n="calc.title">Смета онлайн</h2>
-                    <p class="mb-4" data-i18n="calc.desc">Узнайте ориентировочную стоимость вашего заказа прямо сейчас.</p>
+                    <p class="mb-4" data-i18n="calc.desc">Узнайте ориентировочную стоимость вашего заказа прямо сейчас.
+                    </p>
 
                     <div class="form-grid">
                         <div class="input-group">
@@ -423,7 +461,8 @@
                         <div class="summary-price"><span id="calc-total">82 500</span> ₸</div>
                     </div>
 
-                    <a href="#" id="calc-order-btn" class="btn btn-primary btn-block" target="_blank" data-i18n="calc.btn">Отправить расчет в WhatsApp</a>
+                    <a href="#" id="calc-order-btn" class="btn btn-primary btn-block" target="_blank"
+                        data-i18n="calc.btn">Отправить расчет в WhatsApp</a>
                 </div>
                 <div class="calc-image-area">
                     <!-- Image via CSS -->
@@ -445,21 +484,24 @@
                     <div class="timeline-icon"><i class="fa-solid fa-phone-volume"></i></div>
                     <div class="timeline-content">
                         <h4 data-i18n="log.s1.title">1. Ваша заявка</h4>
-                        <p data-i18n="log.s1.desc">Вы связываетесь с диспетчером для уточнения деталей, марки и времени заливки.</p>
+                        <p data-i18n="log.s1.desc">Вы связываетесь с диспетчером для уточнения деталей, марки и времени
+                            заливки.</p>
                     </div>
                 </div>
                 <div class="timeline-item right fade-in">
                     <div class="timeline-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
                     <div class="timeline-content">
                         <h4 data-i18n="log.s2.title">2. Согласование цены</h4>
-                        <p data-i18n="log.s2.desc">Менеджер рассчитывает итоговую смету с учетом логистики до вашего объекта.</p>
+                        <p data-i18n="log.s2.desc">Менеджер рассчитывает итоговую смету с учетом логистики до вашего
+                            объекта.</p>
                     </div>
                 </div>
                 <div class="timeline-item fade-in">
                     <div class="timeline-icon"><i class="fa-solid fa-industry"></i></div>
                     <div class="timeline-content">
                         <h4 data-i18n="log.s3.title">3. Замес на РБУ</h4>
-                        <p data-i18n="log.s3.desc">Оператор запускает приготовление бетонной смеси точно к назначенному времени.</p>
+                        <p data-i18n="log.s3.desc">Оператор запускает приготовление бетонной смеси точно к назначенному
+                            времени.</p>
                     </div>
                 </div>
                 <div class="timeline-item right fade-in">
@@ -481,7 +523,8 @@
                     <div class="brand-logo footer-brand">
                         <img src="images/logo.png" alt="ASK Beton Logo" style="max-height: 80px; border-radius: 6px;">
                     </div>
-                    <p class="company-desc" data-i18n="foot.desc">Современный бетонный завод. Строгий ГОСТ, точный вес, оперативная доставка
+                    <p class="company-desc" data-i18n="foot.desc">Современный бетонный завод. Строгий ГОСТ, точный вес,
+                        оперативная доставка
                         миксерами.</p>
                     <div class="social-links">
                         <a href="https://wa.me/77027520605" class="social-btn whatsapp" target="_blank"><i
@@ -519,8 +562,8 @@
                                 <span data-i18n="foot.addr">Адрес производства:</span>
                                 <strong><a
                                         href="https://yandex.kz/maps/?text=Квартал+096,+7225%2F1,+с.+Коксай,+Карасайский+район,+Алматинская+область"
-                                        target="_blank"
-                                        style="line-height:1.4; display:inline-block; margin-top:4px;" data-i18n="foot.addr.text">Квартал 096,
+                                        target="_blank" style="line-height:1.4; display:inline-block; margin-top:4px;"
+                                        data-i18n="foot.addr.text">Квартал 096,
                                         7225/1, с. Коксай,<br>Карасайский район, Алматинская область</a></strong>
                             </div>
                         </li>
@@ -546,7 +589,7 @@
     <script src="js/main.js"></script>
     <script>
         // Update price date automatically to today
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             var dateEl = document.getElementById('current-price-date');
             if (dateEl) {
                 var today = new Date();
