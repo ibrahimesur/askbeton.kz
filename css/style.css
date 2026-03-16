@@ -1227,3 +1227,14 @@ ul {
         justify-content: center;
     }
 }
+
+/* ABSOLUTE GLOBAL HIDE FOR MOBILE NAV CONTENT ON DESKTOP */
+.nav-mobile-only {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .nav-mobile-only {
+        display: flex !important;
+    }
+}
